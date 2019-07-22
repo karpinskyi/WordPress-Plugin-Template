@@ -134,6 +134,8 @@ class WordPress_Plugin_Template {
 		// Load API for generic admin functions.
 		if ( is_admin() ) {
 			$this->admin = new WordPress_Plugin_Template_Admin_API();
+		} else {
+			$this->admin = new WordPress_Plugin_Template_Frontend_API();
 		}
 
 		// Handle localisation.
